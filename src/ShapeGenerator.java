@@ -41,7 +41,6 @@ public class ShapeGenerator implements Iterable<Shape> {
         arrOfShapes = new Shape[value];
         for (int i = 0; i < value; i++)
             arrOfShapes[i] = make();
-
     }
 
     public Iterator<Shape> iterator() {

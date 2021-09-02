@@ -6,8 +6,6 @@ public class Main {
             ShapeGenerator sh = new ShapeGenerator(rand);
             for (Shape s : sh)
                 s.draw();
-            System.out.println(rand);
-
         }
     }
 }
