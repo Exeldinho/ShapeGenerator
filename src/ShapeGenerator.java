@@ -1,16 +1,26 @@
 import java.util.Iterator;
 import java.util.Random;
+import java.security.SecureRandom;
 
 public class ShapeGenerator implements Iterable<Shape> {
-    private Random random = new Random();
     private Shape make() {
+        String[] shapeColor = {
+                "червоний",
+                "білий",
+                "зелений",
+                "синій",
+                "фіолетовий",
+                "рожевий" ,
+                "чорний"};
 
-        String[] shapeColor = {"червоний", "білий", "зелений", "синій", "фіолетовий", "рожевий" , "чорний"};
+        Random random = new Random();
+        SecureRandom secureRandom = new SecureRandom();
 
-        double randomBaseNumb = Math.random()*10+1.27;
-        int randomNumb = random.nextInt((int)randomBaseNumb) + 8;
-        int randomNumb2 = random.nextInt(randomNumb) + 8;
         int index = random.nextInt(shapeColor.length);
+
+        double randomBaseNumb = Math.random()*100+1.27;
+        int randomNumb = secureRandom.nextInt((int)(randomBaseNumb)) + 8;
+        int randomNextNumb = random.nextInt(randomNumb) + 8;
 
         switch (random.nextInt(4)) {
             default:
@@ -19,9 +29,9 @@ public class ShapeGenerator implements Iterable<Shape> {
             case 1:
                 return new Square(shapeColor[index], randomNumb);
             case 2:
-                return new Triangle(shapeColor[index], randomNumb, randomNumb2);
+                return new Triangle(shapeColor[index], randomNumb, randomNextNumb);
             case 3:
-                return new Trapeze(shapeColor[index], randomNumb, randomNumb2);
+                return new Trapeze(shapeColor[index], randomNumb, randomNextNumb);
         }
     }
 
