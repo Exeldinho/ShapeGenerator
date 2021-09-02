@@ -2,18 +2,17 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class ShapeGenerator implements Iterable<Shape> {
-    private Random rand = new Random();
+    private Random random = new Random();
     private Shape make() {
 
         String[] shapeColor = {"червоний", "білий", "зелений", "синій", "фіолетовий", "рожевий" , "чорний"};
 
-        Random random = new Random();
         double randomBaseNumb = Math.random()*10+1.27;
         int randomNumb = random.nextInt((int)randomBaseNumb) + 8;
         int randomNumb2 = random.nextInt(randomNumb) + 8;
-        int index = rand.nextInt(shapeColor.length);
+        int index = random.nextInt(shapeColor.length);
 
-        switch (rand.nextInt(4)) {
+        switch (random.nextInt(4)) {
             default:
             case 0:
                 return new Circle(shapeColor[index], randomNumb);
