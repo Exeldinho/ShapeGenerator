@@ -20,7 +20,6 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    @Override
     public double calcArea(){
         return roundAvoid(Math.PI*radius*radius);
     }

@@ -21,5 +21,4 @@ abstract class Shape implements Drawable {
         }
         return value;
     }
-
 }
