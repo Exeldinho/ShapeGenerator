@@ -29,6 +29,7 @@ public class Triangle extends Shape{
         this.height = height;
     }
 
+    @Override
     public double calcArea(){
         return roundAvoid((baseWidth*height)/2);
     }

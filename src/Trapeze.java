@@ -29,6 +29,7 @@ public class Trapeze extends Shape {
         this.height = height;
     }
 
+    @Override
     public double calcArea(){
         return roundAvoid(middleLine*height);
     }

@@ -20,6 +20,7 @@ public class Square extends Shape {
         this.side = width;
     }
 
+    @Override
     public double calcArea(){
         return roundAvoid(side*side);
     }
