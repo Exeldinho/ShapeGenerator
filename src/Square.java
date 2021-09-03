@@ -2,13 +2,14 @@ public class Square extends Shape {
     private double side;
 
     Square(String color, double side){
-        setShapeColor(color);
+        setColor(color);
         this.side = side;
     }
 
     public void draw(){
         System.out.println("Фігура: квадрат, площа: " + calcArea() +
-                " кв. од., довжина сторони: " + side + " од., колір: " + getShapeColor());
+                " кв. од., довжина сторони: " + side +
+                " од., колір: " + getColor());
     }
 
     public double getSide(){

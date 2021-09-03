@@ -2,14 +2,15 @@ public class Triangle extends Shape{
     private double baseWidth, height;
 
     Triangle(String color, double baseWidth, double height){
-        setShapeColor(color);
+        setColor(color);
         this.baseWidth = baseWidth;
         this.height = height;
     }
 
     public void draw(){
         System.out.println("Фігура: трикутник, площа: " + calcArea() +
-                " кв. од., гіпотенуза: " + baseWidth + " од., колір: " + getShapeColor());
+                " кв. од., гіпотенуза: " + baseWidth +
+                " од., колір: " + getColor());
     }
 
     public double getBaseWidth(){

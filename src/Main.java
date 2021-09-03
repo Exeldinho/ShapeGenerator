@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
         {
-            int rand = (int) (Math.random() * 100);
+            int random = (int) (Math.random() * 100);
 
-            ShapeGenerator sh = new ShapeGenerator(rand);
-            for (Shape s : sh)
+            ShapeGenerator shapeGenerator = new ShapeGenerator(random);
+            for (Shape s : shapeGenerator)
                 s.draw();
         }
     }

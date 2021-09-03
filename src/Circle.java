@@ -2,13 +2,14 @@ public class Circle extends Shape {
     private double radius;
 
     Circle(String color, double radius) {
-        setShapeColor(color);
+        setColor(color);
         this.radius = radius;
     }
 
     public void draw(){
         System.out.println("Фігура: коло, площа: " + calcArea() +
-                " кв. од., радіус: " + radius + " од., колір: " + getShapeColor());
+                " кв. од., радіус: " + radius +
+                " од., колір: " + getColor());
     }
 
     public double getRadius(){

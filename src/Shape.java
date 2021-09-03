@@ -6,11 +6,11 @@ abstract class Shape implements Drawable {
     abstract public double calcArea();
     private String shapeColor;
 
-    public String getShapeColor() {
+    public String getColor() {
         return shapeColor;
     }
 
-    public void setShapeColor(String shapeColor) {
+    public void setColor(String shapeColor) {
         this.shapeColor = shapeColor;
     }
 

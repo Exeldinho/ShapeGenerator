@@ -1,6 +1,5 @@
 import java.util.Iterator;
 import java.util.Random;
-import java.security.SecureRandom;
 
 public class ShapeGenerator implements Iterable<Shape> {
     private Shape make() {
@@ -14,12 +13,11 @@ public class ShapeGenerator implements Iterable<Shape> {
                 "чорний"};
 
         Random random = new Random();
-        SecureRandom secureRandom = new SecureRandom();
 
         int index = random.nextInt(shapeColor.length);
 
         double randomBaseNumb = Math.random()*100+1.27;
-        int randomNumb = secureRandom.nextInt((int)(randomBaseNumb)) + 8;
+        int randomNumb = random.nextInt((int)(randomBaseNumb)) + 8;
         int randomNextNumb = random.nextInt(randomNumb) + 8;
 
         switch (random.nextInt(4)) {
@@ -53,10 +51,6 @@ public class ShapeGenerator implements Iterable<Shape> {
 
             public Shape next() {
                 return arrOfShapes[index++];
-            }
-
-            public void remove() {
-                throw new UnsupportedOperationException();
             }
         };
     }
